@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mwalimus School Uniforms – Price List</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #c0162c;
+    --red-light: #e8192e;
+    --gold: #d4a012;
+    --dark: #1a1a1a;
+    --mid: #2e2e2e;
+    --light-bg: #f5f0eb;
+    --cream: #fdf8f2;
+    --border: #d8c9b8;
+    --blue-accent: #1565c0;
+    --green-accent: #2e7d32;
+    --text: #222;
+    --muted: #666;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--light-bg);
+    font-family: 'Lato', sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--dark);
+    color: white;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 32px;
+    border-bottom: 3px solid var(--red);
+  }
+
+  .logo-block { display: flex; align-items: center; gap: 16px; }
+
+  .logo-icon {
+    width: 52px; height: 52px;
+    background: var(--red);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 0 0 3px rgba(192,22,44,0.3);
+  }
+
+  .logo-text h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: white;
+  }
+
+  .logo-text p {
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .contact-block { text-align: right; font-size: 13px; color: #ccc; }
+  .contact-block .phones {
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+    color: var(--gold);
+    letter-spacing: 1px;
+  }
+  .contact-block .location { font-size: 11px; color: #aaa; margin-top: 2px; }
+
+  /* ── NAV TABS ── */
+  nav {
+    background: var(--mid);
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  nav::-webkit-scrollbar { display: none; }
+
+  nav button {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 12px 22px;
+    cursor: pointer;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+  }
+  nav button:hover { color: white; background: rgba(255,255,255,0.05); }
+  nav button.active { color: var(--red-light); border-bottom-color: var(--red-light); background: rgba(192,22,44,0.08); }
+
+  /* ── HERO STRIP ── */
+  .hero-strip {
+    background: var(--red);
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .hero-strip span { color: var(--gold); margin: 0 8px; }
+
+  /* ── MAIN ── */
+  main { max-width: 1100px; margin: 0 auto; padding: 32px 20px 60px; }
+
+  .section { display: none; }
+  .section.active { display: block; }
+
+  /* ── SECTION TITLE ── */
+  .sec-title {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 28px;
+  }
+  .sec-title h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .sec-title .badge {
+    background: var(--red);
+    color: white;
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 2px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .sec-title .line { flex: 1; height: 2px; background: linear-gradient(to right, var(--red), transparent); }
+
+  /* ── SUB TITLE ── */
+  .sub-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--blue-accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 28px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--blue-accent);
+    display: inline-block;
+  }
+
+  /* ── TABLE CARD ── */
+  .table-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .table-card table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+
+  .table-card thead tr {
+    background: var(--dark);
+    color: white;
+  }
+
+  .table-card thead th {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 11px 14px;
+    text-align: left;
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+  .table-card thead th:last-child { border-right: none; }
+
+  .table-card thead th.red-head { color: var(--red-light); }
+  .table-card thead th.blue-head { color: #64b5f6; }
+  .table-card thead th.gold-head { color: var(--gold); }
+  .table-card thead th.green-head { color: #81c784; }
+
+  .table-card tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+  .table-card tbody tr:hover { background: rgba(192,22,44,0.04); }
+  .table-card tbody tr:last-child { border-bottom: none; }
+  .table-card tbody tr:nth-child(even) { background: rgba(0,0,0,0.02); }
+  .table-card tbody tr:nth-child(even):hover { background: rgba(192,22,44,0.04); }
+
+  .table-card tbody td {
+    padding: 9px 14px;
+    border-right: 1px solid rgba(0,0,0,0.06);
+    color: var(--text);
+  }
+  .table-card tbody td:last-child { border-right: none; }
+
+  td.red { color: var(--red); font-weight: 700; }
+  td.blue { color: var(--blue-accent); font-weight: 700; }
+  td.green { color: var(--green-accent); font-weight: 700; }
+  td.gold { color: var(--gold); font-weight: 700; }
+  td.bold { font-weight: 700; color: var(--dark); }
+  td.center { text-align: center; }
+
+  /* ── PRICE HIGHLIGHT ── */
+  .price { font-family: 'Oswald', sans-serif; font-size: 15px; }
+
+  /* ── PE KIT / GOWN CARDS ── */
+  .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 28px; }
+
+  .info-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .info-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--red);
+  }
+
+  .size-rows { display: flex; flex-direction: column; gap: 8px; }
+  .size-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+  .size-row .sz { font-family: 'Oswald', sans-serif; font-weight: 600; color: var(--red-light); font-size: 15px; }
+  .size-row .pr { font-family: 'Oswald', sans-serif; color: var(--dark); font-size: 15px; }
+  .size-row .pr span { font-size: 11px; color: var(--muted); font-family: 'Lato', sans-serif; }
+
+  .gown-prices { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+  .gown-chip {
+    background: var(--dark);
+    color: var(--gold);
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    padding: 5px 12px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+  }
+
+  /* ── SPECIAL OFFER BANNER ── */
+  .offer-banner {
+    background: linear-gradient(135deg, var(--dark) 0%, #3a0010 100%);
+    color: white;
+    border-radius: 6px;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+    box-shadow: 0 4px 20px rgba(192,22,44,0.2);
+  }
+  .offer-banner .star { font-size: 32px; }
+  .offer-banner p { font-size: 14px; color: #ccc; }
+  .offer-banner h3 { font-family: 'Oswald', sans-serif; color: var(--gold); font-size: 18px; letter-spacing: 1px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    color: #888;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-top: 3px solid var(--red);
+    margin-top: 40px;
+  }
+  footer strong { color: var(--gold); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .header-inner { flex-direction: column; gap: 10px; text-align: center; }
+    .contact-block { text-align: center; }
+    .table-card table { font-size: 12px; }
+    .table-card thead th, .table-card tbody td { padding: 8px 8px; }
+    main { padding: 20px 10px 50px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-block">
+      <div class="logo-icon">🪡</div>
+      <div class="logo-text">
+        <h1>MWALIMUS</h1>
+        <p>Sewers &amp; Knitters · Best, Smart &amp; Quality Wears</p>
+      </div>
+    </div>
+    <div class="contact-block">
+      <div class="phones">0710 148 643 / 0718 283 973</div>
+      <div class="location">📍 Off Jogoo Road · Uhuru Market, Nairobi</div>
+    </div>
+  </div>
+  <nav id="nav">
+    <button class="active" onclick="showTab('tracksuits')">Tracksuits</button>
+    <button onclick="showTab('fleece')">Fleece Jackets</button>
+    <button onclick="showTab('tshirts')">T-Shirts</button>
+    <button onclick="showTab('sweaters')">Sweaters</button>
+    <button onclick="showTab('shirts')">Shirts</button>
+    <button onclick="showTab('shorts')">Shorts</button>
+    <button onclick="showTab('trousers')">Trousers</button>
+    <button onclick="showTab('extra')">PE Kit &amp; Gowns</button>
+  </nav>
+</header>
+
+<div class="hero-strip">
+  Dealers in <span>Track Suits · Fleece Jackets · T-Shirts · Games Kits · Graduation Gowns · Blazers · Shirts · Trousers · Shorts · Dresses · Ties · Socks</span> &amp; other School Wears
+</div>
+
+<main>
+
+  <!-- ══════════ TRACKSUITS ══════════ -->
+  <div class="section active" id="tracksuits">
+    <div class="sec-title">
+      <h2>Tracksuits</h2>
+      <span class="badge">Special Derik · All Colours &amp; Designs</span>
+      <div class="line"></div>
+    </div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th class="blue-head">Age / Yrs</th>
+            <th class="red-head">Sizes</th>
+            <th>Grade</th>
+            <th class="gold-head">Wholesale (KSh)</th>
+            <th class="red-head">Retail (KSh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="bold">2–4</td><td class="red">20–22</td><td>PG–PP1</td><td class="price gold">800</td><td class="price red">850</td></tr>
+          <tr><td class="bold">4–8</td><td class="red">24–26</td><td>PP2–G2</td><td class="price gold">850</td><td class="price red">900</td></tr>
+          <tr><td class="bold">8–10</td><td class="red">28–30</td><td>G2–G4</td><td class="price gold">900</td><td class="price red">950</td></tr>
+          <tr><td class="bold">10–11</td><td class="red">32–34</td><td>G4–G6</td><td class="price gold">950</td><td class="price red">1,000</td></tr>
+          <tr><td class="bold">12–20</td><td class="red">36–38</td><td>G8–F4</td><td class="price gold">1,050</td><td class="price red">1,100</td></tr>
+          <tr><td class="bold">Seniors &amp; Adults</td><td class="red">40</td><td>Senior Sch.</td><td class="price gold">1,150</td><td class="price red">1,250</td></tr>
+          <tr><td class="bold">—</td><td class="red">42</td><td>College</td><td class="price gold">1,250</td><td class="price red">1,350</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="offer-banner">
+      <div class="star">✦</div>
+      <div>
+        <h3>Logo Printing &amp; Embroidery Services Offered</h3>
+        <p>Welcome to Mwalimus for the Best, Smart and Quality Wears.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ FLEECE JACKETS ══════════ -->
+  <div class="section" id="fleece">
+    <div class="sec-title">
+      <h2>Fleece Jackets</h2>
+      <span class="badge">Jumpers · All Colours</span>
+      <div class="line"></div>
+    </div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th class="blue-head">Age</th>
+            <th class="red-head">Sizes</th>
+            <th>Grade</th>
+            <th class="gold-head">Wholesale (KSh)</th>
+            <th class="red-head">Retail (KSh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="bold">2–4</td><td class="red">20–22</td><td>PG–PP1</td><td class="price gold">1,300</td><td class="price red">1,400</td></tr>
+          <tr><td class="bold">4–8</td><td class="red">24–26</td><td>PP1–G2</td><td class="price gold">1,400</td><td class="price red">1,500</td></tr>
+          <tr><td class="bold">8–10</td><td class="red">28–30</td><td>G2–G4</td><td class="price gold">1,500</td><td class="price red">1,600</td></tr>
+          <tr><td class="bold">10–12</td><td class="red">32–34</td><td>G4–G8</td><td class="price gold">1,600</td><td class="price red">1,700</td></tr>
+          <tr><td class="bold">Senior / Adults</td><td class="red">36–38</td><td>Senior Sch. / College</td><td class="price gold">1,700</td><td class="price red">1,800</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="offer-banner">
+      <div class="star">✦</div>
+      <div>
+        <h3>Logo Printing &amp; Embroidery Services Offered</h3>
+        <p>Welcome to Mwalimus for the Best, Smart and Quality Wears.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ T-SHIRTS ══════════ -->
+  <div class="section" id="tshirts">
+    <div class="sec-title">
+      <h2>T-Shirts</h2>
+      <span class="badge">LDP · Plain · Derik · Polo</span>
+      <div class="line"></div>
+    </div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th class="blue-head">Age</th>
+            <th class="red-head">Sizes</th>
+            <th>Grade</th>
+            <th class="gold-head">LDP / Derik (KSh)</th>
+            <th class="red-head">Polo (KSh)</th>
+            <th class="green-head">Plain (KSh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="bold">PG–G1</td><td class="red">60–65</td><td>2–7 yrs</td><td class="price gold">300</td><td class="price red">550</td><td class="price green">250</td></tr>
+          <tr><td class="bold">G1–G4</td><td class="red">70–75</td><td>7–11 yrs</td><td class="price gold">350</td><td class="price red">600</td><td class="price green">300</td></tr>
+          <tr><td class="bold">G4–F4</td><td class="red">80–90</td><td>11–18 yrs</td><td class="price gold">400</td><td class="price red">650</td><td class="price green">350</td></tr>
+          <tr><td class="bold">Adults</td><td class="red">M–XXL</td><td>Adults</td><td class="price gold">450</td><td class="price red">700</td><td class="price green">400</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="offer-banner">
+      <div class="star">✦</div>
+      <div>
+        <h3>Logo Printing &amp; Embroidery Services Offered</h3>
+        <p>Welcome to Mwalimus for the Best, Smart and Quality Wears.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ SWEATERS ══════════ -->
+  <div class="section" id="sweaters">
+    <div class="sec-title">
+      <h2>Sweaters</h2>
+      <span class="badge">Wholesale Prices</span>
+      <div class="line"></div>
+    </div>
+
+    <div class="sub-title">Long Sleeved</div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th class="blue-head">Age</th>
+            <th>Grade</th>
+            <th class="red-head">Sizes</th>
+            <th class="gold-head">Plain (KSh)</th>
+            <th class="green-head">Stripes (KSh)</th>
+            <th class="red-head">Open (KSh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="bold">2–4</td><td>PG–PPII</td><td class="red">22</td><td class="price gold">450</td><td class="price green">500</td><td class="price red">700</td></tr>
+          <tr><td class="bold">4–8</td><td>PP2–G2</td><td class="red">24</td><td class="price gold">500</td><td class="price green">550</td><td class="price red">750</td></tr>
+          <tr><td></td><td></td><td class="red">26</td><td class="price gold">550</td><td class="price green">600</td><td class="price red">800</td></tr>
+          <tr><td class="bold">8–10</td><td>G2–G4</td><td class="red">28</td><td class="price gold">550</td><td class="price green">600</td><td class="price red">850</td></tr>
+          <tr><td></td><td></td><td class="red">30</td><td class="price gold">600</td><td class="price green">650</td><td class="price red">900</td></tr>
+          <tr><td class="bold">10–12</td><td>G4–G8</td><td class="red">32</td><td class="price gold">600</td><td class="price green">650</td><td class="price red">950</td></tr>
+          <tr><td></td><td></td><td class="red">34</td><td class="price gold">650</td><td class="price green">700</td><td class="price red">1,050</td></tr>
+          <tr><td class="bold">13–20</td><td>Senior Sch.</td><td class="red">36</td><td class="price gold">700</td><td class="price green">750</td><td class="price red">1,150</td></tr>
+          <tr><td class="bold">L</td><td></td><td class="red">38</td><td class="price gold">750</td><td class="price green">800</td><td class="price red">1,250</td></tr>
+          <tr><td class="bold">XL</td><td>Colleges</td><td class="red">40</td><td class="price gold">850</td><td class="price green">950</td><td class="price red">1,350</td></tr>
+          <tr><td class="bold">XXL</td><td></td><td class="red">42</td><td class="price gold">1,000</td><td class="price green">1,050</td><td class="price red">1,450</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-title">Sleeveless (Sweaters)</div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th class="blue-head">Age</th>
+            <th>Grade</th>
+            <th class="red-head">Sizes</th>
+            <th class="gold-head">Plain (KSh)</th>
+            <th class="green-head">Stripes (KSh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="bold">2–4</td><td>PG–PPII</td><td class="red">22</td><td class="price gold">400</td><td class="price green">450</td></tr>
+          <tr><td class="bold">4–8</td><td>PP2–G2</td><td class="red">24</td><td class="price gold">450</td><td class="price green">500</td></tr>
+          <tr><td></td><td></td><td class="red">26</td><td class="price gold">500</td><td class="price green">550</td></tr>
+          <tr><td class="bold">8–10</td><td>G2–G4</td><td class="red">28</td><td class="price gold">500</td><td class="price green">550</td></tr>
+          <tr><td></td><td></td><td class="red">30</td><td class="price gold">550</td><td class="price green">600</td></tr>
+          <tr><td class="bold">10–12</td><td>G4–G8</td><td class="red">32</td><td class="price gold">550</td><td class="price green">600</td></tr>
+          <tr><td></td><td></td><td class="red">34</td><td class="price gold">600</td><td class="price green">650</td></tr>
+          <tr><td class="bold">13–20</td><td>Senior Sch.</td><td class="red">36</td><td class="price gold">700</td><td class="price green">750</td></tr>
+          <tr><td class="bold">L</td><td></td><td class="red">38</td><td class="price gold">750</td><td class="price green">800</td></tr>
+          <tr><td class="bold">XL</td><td>Colleges</td><td class="red">40</td><td class="price gold">800</td><td class="price green">850</td></tr>
+          <tr><td class="bold">XXL</td><td></td><td class="red">42</td><td class="price gold">950</td><td class="price green">1,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="offer-banner">
+      <div class="star">✦</div>
+      <div>
+        <h3>Logo Printing &amp; Embroidery Services Offered</h3>
+        <p>Welcome to Mwalimus for the Best, Smart and Quality Wears.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ SHIRTS ══════════ -->
+  <div class="section" id="shirts">
+    <div class="sec-title">
+      <h2>Shirts</h2>
+      <span class="badge">Wholesale Prices</span>
+      <div class="line"></div>
+    </div>
+
+    <div class="sub-title">Short Sleeved</div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th class="blue-head">Age</th>
+            <th>Size</th>
+            <th class="gold-head">Plain (KSh)</th>
+            <th class="red-head">Checked (KSh)</th>
+            <th>Plain Yoked Size</th>
+            <th class="green-head">Plain Yoked (KSh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="bold">3–5</td><td class="red">SS 65</td><td class="price gold">200</td><td class="price red">250</td><td class="blue">18–20</td><td class="price green">250</td></tr>
+          <tr><td class="bold">6–8</td><td class="red">S 70</td><td class="price gold">—</td><td class="price red">—</td><td>—</td><td>—</td></tr>
+          <tr><td class="bold">9–12</td><td class="red">M 75</td><td class="price gold">250</td><td class="price red">300</td><td class="blue">22–24</td><td class="price green">300</td></tr>
+          <tr><td class="bold">J. SCH</td><td class="red">S 80</td><td class="price gold">—</td><td class="price red">—</td><td>—</td><td>—</td></tr>
+          <tr><td class="bold">H. SCH</td><td class="red">M 85</td><td class="price gold">300</td><td class="price red">350</td><td class="blue">26–28</td><td class="price green">350</td></tr>
+          <tr><td></td><td class="red">L 90</td><td class="price gold">—</td><td class="price red">—</td><td>—</td><td>—</td></tr>
+          <tr><td></td><td class="red">XL 95</td><td class="price gold">350</td><td class="price red">400</td><td class="blue">30</td><td class="price green">400</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-title">Long Sleeved (Hard Collar)</div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th class="blue-head">Age</th>
+            <th>Size</th>
+            <th class="gold-head">Plain (KSh)</th>
+            <th class="green-head">Cotton (KSh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="bold">3–5</td><td class="red">SS 65</td><td class="price gold">330</td><td class="price green">400</td></tr>
+          <tr><td class="bold">6–8</td><td class="red">S 70</td><td class="price gold">—</td><td>—</td></tr>
+          <tr><td class="bold">9–12</td><td class="red">M 75</td><td class="price gold">370</td><td class="price green">450</td></tr>
+          <tr><td class="bold">J. SCH</td><td class="red">S 80</td><td class="price gold">—</td><td>—</td></tr>
+          <tr><td class="bold">H. SCH</td><td class="red">M 85</td><td class="price gold">400</td><td class="price green">550</td></tr>
+          <tr><td></td><td class="red">L 90</td><td class="price gold">—</td><td>—</td></tr>
+          <tr><td></td><td class="red">XL 95</td><td class="price gold">450</td><td class="price green">600</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="offer-banner">
+      <div class="star">✦</div>
+      <div>
+        <h3>Logo Branding &amp; Embroidery Services Offered</h3>
+        <p>Welcome to Mwalimus for the Best, Smart and Quality Wears.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ SHORTS ══════════ -->
+  <div class="section" id="shorts">
+    <div class="sec-title">
+      <h2>Shorts</h2>
+      <span class="badge">Wholesale Prices</span>
+      <div class="line"></div>
+    </div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th class="blue-head">Age</th>
+            <th>Grade</th>
+            <th class="red-head">Summit Size</th>
+            <th class="gold-head">Summit (KSh)</th>
+            <th class="green-head">Grey (KSh)</th>
+            <th class="red-head">Khaki American (KSh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="bold">2–4</td><td>PG–PP1</td><td class="red">20–22</td><td class="price gold">250</td><td class="price green">300</td><td class="price red">500</td></tr>
+          <tr><td class="bold">4–8</td><td>PPII–G2</td><td class="red">24–26</td><td class="price gold">300</td><td class="price green">350</td><td class="price red">550</td></tr>
+          <tr><td class="bold">8–10</td><td>G2–G4</td><td class="red">28–30</td><td class="price gold">350</td><td class="price green">400</td><td class="price red">600</td></tr>
+          <tr><td class="bold">10–12</td><td>G4–G6 / Jr. Sec</td><td class="red">32–34</td><td class="price gold">400</td><td class="price green">450</td><td class="price red">650</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="offer-banner">
+      <div class="star">✦</div>
+      <div>
+        <h3>Logo Branding &amp; Embroidery Services Offered</h3>
+        <p>Welcome to Mwalimus for the Best, Smart and Quality Wears.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ TROUSERS ══════════ -->
+  <div class="section" id="trousers">
+    <div class="sec-title">
+      <h2>Trousers</h2>
+      <span class="badge">Wholesale Prices</span>
+      <div class="line"></div>
+    </div>
+
+    <div class="sub-title">Primary Trousers</div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th class="blue-head">Age</th>
+            <th>Grade</th>
+            <th class="red-head">Size</th>
+            <th class="gold-head">Summit (KSh)</th>
+            <th class="green-head">Grey (KSh)</th>
+            <th>PE Short – Plain</th>
+            <th>PE Short – Stripes</th>
+            <th class="red-head">Khaki (KSh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="bold">2–4</td><td>PG–PPI</td><td class="red">20–22</td><td class="price gold">350</td><td class="price green">400</td><td>250</td><td>300</td><td class="price red">700</td></tr>
+          <tr><td class="bold">4–8</td><td>PPII–G2</td><td class="red">24–26</td><td class="price gold">400</td><td class="price green">450</td><td>300</td><td>350</td><td class="price red">800</td></tr>
+          <tr><td class="bold">8–10</td><td>G2–G4</td><td class="red">28–30</td><td class="price gold">450</td><td class="price green">500</td><td>350</td><td>400</td><td class="price red">900</td></tr>
+          <tr><td class="bold">10–12</td><td>G4–G8</td><td class="red">32–34</td><td class="price gold">500</td><td class="price green">550</td><td>400</td><td>450</td><td class="price red">1,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-title">High School Trousers</div>
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th class="blue-head">Age</th>
+            <th class="red-head">Length / Size</th>
+            <th>Waist</th>
+            <th class="gold-head">Summit (KSh)</th>
+            <th class="green-head">Grey (KSh)</th>
+            <th class="red-head">Khaki (KSh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="bold" rowspan="3">Junior–Senior / College / Adults</td><td class="red">36–38</td><td>26–28</td><td class="price gold">600</td><td class="price green">700</td><td class="price red">1,100</td></tr>
+          <tr><td class="red">40</td><td>30–32</td><td class="price gold">650</td><td class="price green">750</td><td class="price red">1,200</td></tr>
+          <tr><td class="red">42</td><td>34–36</td><td class="price gold">700</td><td class="price green">800</td><td class="price red">1,300</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="offer-banner">
+      <div class="star">✦</div>
+      <div>
+        <h3>Logo Branding &amp; Embroidery Services Offered</h3>
+        <p>Welcome to Mwalimus for the Best, Smart and Quality Wears.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ PE KIT & GOWNS ══════════ -->
+  <div class="section" id="extra">
+    <div class="sec-title">
+      <h2>PE Kit &amp; Graduation Gowns</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>🏃 PE Kit (T-Shirt &amp; Short)</h3>
+        <div class="size-rows">
+          <div class="size-row"><span class="sz">S</span><span class="pr">KSh 550</span></div>
+          <div class="size-row"><span class="sz">M</span><span class="pr">KSh 600</span></div>
+          <div class="size-row"><span class="sz">L</span><span class="pr">KSh 650</span></div>
+          <div class="size-row"><span class="sz">XL</span><span class="pr">KSh 700</span></div>
+          <div class="size-row"><span class="sz">XXL</span><span class="pr">KSh 800</span></div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>🎓 Graduation Gowns</h3>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:12px;">Multiple styles available</p>
+        <div class="gown-prices">
+          <span class="gown-chip">1,000</span>
+          <span class="gown-chip">1,300</span>
+          <span class="gown-chip">1,500</span>
+          <span class="gown-chip">1,700</span>
+          <span class="gown-chip">2,000</span>
+          <span class="gown-chip">2,500</span>
+          <span class="gown-chip">3,000+</span>
+        </div>
+        <p style="font-size:11px;color:var(--muted);margin-top:12px;">Prices in KSh. Contact for custom graduation wear.</p>
+      </div>
+    </div>
+
+    <div class="offer-banner">
+      <div class="star">✦</div>
+      <div>
+        <h3>Special Offer! Logo Printing &amp; Embroidery Services Offered</h3>
+        <p>Welcome to Mwalimus for the Best, Smart and Quality Wears.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <strong>MWALIMUS SCHOOL UNIFORMS</strong> · Sewers &amp; Knitters · Off Jogoo Road, Uhuru Market, Nairobi<br>
+  📞 Michael: 0710 148 643 &nbsp;|&nbsp; Eunice: 0718 283 973
+</footer>
+
+<script>
+  function showTab(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    const idx = ['tracksuits','fleece','tshirts','sweaters','shirts','shorts','trousers','extra'].indexOf(id);
+    document.querySelectorAll('nav button')[idx].classList.add('active');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+</script>
+</body>
+</html>
